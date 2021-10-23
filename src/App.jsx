@@ -53,7 +53,7 @@ const App = () => {
 
   // Update
   const getFavourites = () => {
-    getDocs(collection(db, (authUser ? authUser.displayName : "Karan"))).then(docs => {
+    getDocs(collection(db, (authUser ? authUser.displayName : "Karan Sivalingam"))).then(docs => {
       const favouriteBeers = [];
       docs.forEach(doc => {
         favouriteBeers.push(doc.data().name);
