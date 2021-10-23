@@ -42,7 +42,7 @@ const Carousel = (props) => {
                 onClick={handleDecrement}
                 className="carousel__arrow carousel__arrow--left"
             />
-            {firebaseFavourites.length ? <Beer image_url={currentBeer.image_url} name={currentBeer.name} tagline={currentBeer.tagline} description={currentBeer.description} abv={currentBeer.abv} ph={currentBeer.ph} firebaseFavourites={firebaseFavourites} /> : "You currently have no favorites."}
+            {firebaseFavourites.length ? <Beer image_url={currentBeer.image_url} name={currentBeer.name} tagline={currentBeer.tagline} description={currentBeer.description} abv={currentBeer.abv} ph={currentBeer.ph} firebaseFavourites={firebaseFavourites} /> : "You currently have no favorites :(."}
             <img
                 src={rightArrow}
                 alt="right arrow"
