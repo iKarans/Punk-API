@@ -4,9 +4,9 @@ import "./App.scss";
 
 import Nav from "./components/Nav/Nav";
 import Carousel from "./components/Carousel/Carousel";
-import Home from "./container/Home/Home";
+import Home from "./containers/Home/Home";
 
-import { provider, auth } from "./firebase";
+import { provider, auth } from "./firebase.js";
 import { signInWithRedirect, onAuthStateChanged, signOut } from "@firebase/auth";
 import { collection, getDocs, deleteDoc, setDoc, doc } from "@firebase/firestore";
 import { db } from "./firebase";
@@ -110,17 +110,17 @@ const App = () => {
     getBeers();
   }, [])
 
-  const privateRoute = authUser ? "" : <Redirect to="/beers-api/" />
+  const privateRoute = authUser ? "" : <Redirect to="/" />
   return (
     <Router>
       <div className="app">
         <Nav searchHandler={searchHandler} handleIsClassic={handleIsClassic} phLevel={phLevel} handlePhLevel={handlePhLevel} abvLevel={abvLevel} handleAbvLevel={handleAbvLevel} authUser={authUser} handleLogin={handleLogin} handleLogout={handleLogout} />
         <Switch>
-          <Route path="/beers-api/favourites">
+          <Route path="/favourites">
             {privateRoute}
             <Carousel beers={beers} firebaseFavourites={firebaseFavourites}/>
           </Route>
-          <Route path="/beers-api/">
+          <Route path="/">
             <Home beers={beers} isClassic={isClassic} searchWord={searchWord} phLevel={phLevel} abvLevel={abvLevel} authUser={authUser} addToFavourites={addToFavourites} firebaseFavourites={firebaseFavourites} deleteFavourites={deleteFavourites} />
           </Route>
         </Switch>

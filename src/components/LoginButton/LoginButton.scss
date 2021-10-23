@@ -1,0 +1,10 @@
+.login-button {
+    &__login {
+        display: flex;
+        cursor: pointer;
+    }
+    &__logout {
+        display: flex;
+        cursor: pointer;
+    }
+}
