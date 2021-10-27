@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import "./App.scss";
 
 
@@ -52,7 +52,7 @@ const App = () => {
   }
 
   // Update
-  const getFavourites = () => {
+  const getFavourites = useCallback(() => {
     getDocs(collection(db, (authUser ? authUser.displayName : "Karan Sivalingam"))).then(docs => {
       const favouriteBeers = [];
       docs.forEach(doc => {
@@ -60,7 +60,7 @@ const App = () => {
       });
       setFirebaseFavourites(favouriteBeers);
     });
-  };
+  }, [authUser]);
 
   // Delete
   const deleteFavourites = (name) => {
