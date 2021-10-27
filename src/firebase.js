@@ -19,7 +19,9 @@ const firebaseConfig = {
   };
 
 // Initialize Firebase
+/* eslint-disable no-unused-vars */
 const app = initializeApp(firebaseConfig);
+
 // const analytics = getAnalytics(app);
 
 export const provider = new GoogleAuthProvider();
