@@ -4,7 +4,7 @@ import "./Filter.scss";
 const Filter = (props) => {
     const { handleIsClassic, phLevel, handlePhLevel, abvLevel, handleAbvLevel } = props;
     const handlePhChange = (event) => {
-        handlePhLevel(parseInt(event.target.value));
+        handlePhLevel(parseFloat(event.target.value));
     }
     const handleAbvChange = (event) => {
         handleAbvLevel(parseInt(event.target.value))

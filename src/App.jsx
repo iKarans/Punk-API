@@ -30,7 +30,7 @@ const App = () => {
         setAuthUser(null);
       }
     });
-  },);
+  },[]);
 
   const handleLogout = () => {
     signOut(auth);
