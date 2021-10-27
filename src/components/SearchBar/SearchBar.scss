@@ -1,3 +1,9 @@
 .search-bar {
-    margin-right: 30px;
+    position: relative;
+    &__input {
+        margin-right: 5px;
+    }
+    &__glass {
+    }
+    
 }

@@ -11,12 +11,12 @@ const LoginButton = (props) => {
         <div className="login-button">
             {authUser ? (
                     <div className="login-button__logout" onClick={handleLogout}>
-                        <FontAwesomeIcon icon={faUser} />
+                        <FontAwesomeIcon icon={faUser} className="login-button__logout__icon"/>
                         <p>Logout</p>    
                     </div>
             ): (
             <div className="login-button__login" onClick={handleLogin}>
-                <FontAwesomeIcon icon={faUser} />
+                <FontAwesomeIcon icon={faUser} className="login-button__login__icon"/>
                 <p>Login</p>    
             </div>
             )}

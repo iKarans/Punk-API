@@ -2,9 +2,15 @@
     &__login {
         display: flex;
         cursor: pointer;
+        &__icon {
+            margin-right: 5px;
+        }
     }
     &__logout {
         display: flex;
         cursor: pointer;
+        &__icon {
+            margin-right: 5px;
+        }
     }
 }

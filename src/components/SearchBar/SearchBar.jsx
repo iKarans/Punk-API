@@ -11,8 +11,8 @@ const SearchBar = (props) => {
     }
     return (
         <div className="search-bar">
-            <FontAwesomeIcon icon={faSearch} />
-            <input type="text" placeholder="Search" onChange={handleLetterInput}/>
+            <input type="text" placeholder="Search" onChange={handleLetterInput} className="search-bar__input"/>
+            <FontAwesomeIcon icon={faSearch} className="search-bar__glass"/>
         </div>
     )
 }
