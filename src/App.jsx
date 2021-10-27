@@ -69,7 +69,7 @@ const App = () => {
 
   useEffect(() => {
     getFavourites();
-  },[authUser, firebaseFavourites]);
+  },[authUser, firebaseFavourites, getFavourites]);
 
   // Search Logic
   const [searchWord, setSearchWord] = useState("");
