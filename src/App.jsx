@@ -118,7 +118,7 @@ const App = () => {
         <Switch>
           <Route path="/favourites">
             {privateRoute}
-            <Carousel beers={beers} firebaseFavourites={firebaseFavourites}/>
+            <Carousel beers={beers} firebaseFavourites={firebaseFavourites} addToFavourites={addToFavourites} deleteFavourites={deleteFavourites}/>
           </Route>
           <Route path="/">
             <Home beers={beers} isClassic={isClassic} searchWord={searchWord} phLevel={phLevel} abvLevel={abvLevel} authUser={authUser} addToFavourites={addToFavourites} firebaseFavourites={firebaseFavourites} deleteFavourites={deleteFavourites} />
