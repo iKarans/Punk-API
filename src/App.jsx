@@ -58,9 +58,9 @@ const App = () => {
       docs.forEach(doc => {
         favouriteBeers.push(doc.data().name);
       });
-      setFirebaseFavourites(favouriteBeers);
+      (authUser ? setFirebaseFavourites(favouriteBeers) : setFirebaseFavourites([]));
     });
-  }, [authUser]);
+  },[authUser]);
 
   // Delete
   const deleteFavourites = (name) => {
@@ -69,7 +69,9 @@ const App = () => {
 
   useEffect(() => {
     getFavourites();
-  },[authUser, firebaseFavourites, getFavourites]);
+  },[getFavourites, authUser]);
+
+  //
 
   // Search Logic
   const [searchWord, setSearchWord] = useState("");
@@ -118,13 +120,12 @@ const App = () => {
         <Switch>
           <Route path="/favourites">
             {privateRoute}
-            <Carousel beers={beers} firebaseFavourites={firebaseFavourites} addToFavourites={addToFavourites} deleteFavourites={deleteFavourites}/>
+            <Carousel beers={beers} firebaseFavourites={firebaseFavourites} addToFavourites={addToFavourites} deleteFavourites={deleteFavourites} getFavourites={getFavourites}/>
           </Route>
           <Route path="/">
-            <Home beers={beers} isClassic={isClassic} searchWord={searchWord} phLevel={phLevel} abvLevel={abvLevel} authUser={authUser} addToFavourites={addToFavourites} firebaseFavourites={firebaseFavourites} deleteFavourites={deleteFavourites} />
+            <Home beers={beers} isClassic={isClassic} searchWord={searchWord} phLevel={phLevel} abvLevel={abvLevel} authUser={authUser} addToFavourites={addToFavourites} firebaseFavourites={firebaseFavourites} deleteFavourites={deleteFavourites} getFavourites={getFavourites} />
           </Route>
         </Switch>
-
       </div>
     </Router>
   );

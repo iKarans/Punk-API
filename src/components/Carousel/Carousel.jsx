@@ -7,7 +7,8 @@ import rightArrow from "../../assets/images/right-arrow.png";
 import Beer from "../Beer/Beer.jsx";
 
 const Carousel = (props) => {
-    const {beers, firebaseFavourites, addToFavourites, deleteFavourites} = props;
+  console.log("carousel");
+    const {beers, firebaseFavourites, addToFavourites, deleteFavourites, getFavourites} = props;
 
     const [counter, setCounter] = useState(0);
 
@@ -43,7 +44,7 @@ const Carousel = (props) => {
                 className="carousel__arrow carousel__arrow--left"
             />
             {firebaseFavourites.length ? 
-            <Beer image_url={currentBeer.image_url} name={currentBeer.name} tagline={currentBeer.tagline} description={currentBeer.description} abv={currentBeer.abv} ph={currentBeer.ph} firebaseFavourites={firebaseFavourites} addToFavourites={addToFavourites} deleteFavourites={deleteFavourites} /> 
+            <Beer image_url={currentBeer.image_url} name={currentBeer.name} tagline={currentBeer.tagline} abv={currentBeer.abv} ph={currentBeer.ph} id={currentBeer.id} firebaseFavourites={firebaseFavourites} addToFavourites={addToFavourites} deleteFavourites={deleteFavourites} getFavourites={getFavourites}/> 
             : "You currently have no favorites."}
             <img
                 src={rightArrow}
