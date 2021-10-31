@@ -7,7 +7,6 @@ import rightArrow from "../../assets/images/right-arrow.png";
 import Beer from "../Beer/Beer.jsx";
 
 const Carousel = (props) => {
-  console.log("carousel");
     const {beers, firebaseFavourites, addToFavourites, deleteFavourites, getFavourites} = props;
 
     const [counter, setCounter] = useState(0);

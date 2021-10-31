@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
 const Beer = (props) => {
-    console.log("Beer");
     const { image_url, name, tagline, description, abv, ph, addToFavourites, firebaseFavourites, deleteFavourites, getFavourites} = props;
     const [isClicked, setIsClicked] = useState(false);
     const handleMoreInfo = () => {
