@@ -43,7 +43,7 @@ const Carousel = (props) => {
                 className="carousel__arrow carousel__arrow--left"
             />
             {firebaseFavourites.length ? 
-            <Beer image_url={currentBeer.image_url} name={currentBeer.name} tagline={currentBeer.tagline} abv={currentBeer.abv} ph={currentBeer.ph} id={currentBeer.id} firebaseFavourites={firebaseFavourites} addToFavourites={addToFavourites} deleteFavourites={deleteFavourites} getFavourites={getFavourites}/> 
+            <Beer image_url={currentBeer.image_url} name={currentBeer.name} tagline={currentBeer.tagline} abv={currentBeer.abv} ph={currentBeer.ph} id={currentBeer.id} description={currentBeer.description} firebaseFavourites={firebaseFavourites} addToFavourites={addToFavourites} deleteFavourites={deleteFavourites} getFavourites={getFavourites}/> 
             : "You currently have no favorites."}
             <img
                 src={rightArrow}
