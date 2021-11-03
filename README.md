@@ -13,4 +13,5 @@ https://punk-api-aaea6.web.app/
 # To-Dos/Improvement
 
 * Make website responsive.
+* Better CSS
 * Add params for favourited beers.
