@@ -1,6 +1,6 @@
 # Punk API
 
-![Punk API Project](https://github.com/iKarans/Punk-API/blob/main/beers-api.png)
+![Punk API Project](https://github.com/iKarans/Punk-API/blob/main/Beers-Api.png)
 
 ## Introduction
 
