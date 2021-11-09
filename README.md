@@ -14,7 +14,7 @@ If you want to unlock additional features, then you will have to sign in using t
 
 https://punk-api-aaea6.web.app/
 
-## To-Dos/Improvement
+## To-Dos / Improvement
 
 * Make website responsive.
 * Better CSS
